@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+
+# uv / virtualenv
+.venv/
+
+# Data (raw + intermediate)
+data/
+_tmp_idx_downloads/
+
+# OS
+.DS_Store
+
+# Credentials
+*.json
+.env
+EOF
