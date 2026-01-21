@@ -56,24 +56,40 @@ def fix_ixviewer_url(url: Optional[str]) -> Optional[str]:
 # ============================================================
 # 1) YOUR WORKING HTML LOADER (core preserved)
 # ============================================================
-def extract_filing_html_directly(row, user_agent_email):
-    """Downloads a single filing and returns (url, html, status_message)."""
+def extract_filing_html_directly(row, user_agent_email: str):
     try:
-        filename = row.get("Filename")
-        if not isinstance(filename, str) or not filename.strip():
+        filename = str(row.get("Filename", "")).strip().replace(" ", "")
+        if not filename:
             return None, None, "❌ Missing or invalid Filename"
 
-        parts = filename.strip().split("/")
+        headers = {"User-Agent": user_agent_email}
+
+        # ------------------------------------------------------------
+        # CASE 1: Filename already points directly to a document
+        # Example: edgar/data/861439/000091205794000263.txt
+        # ------------------------------------------------------------
+        if filename.lower().endswith((".txt", ".htm", ".html")):
+            filing_url = f"https://www.sec.gov/Archives/{filename.lstrip('/')}"
+            resp = requests.get(filing_url, headers=headers, timeout=25)
+            if resp.status_code != 200:
+                return filing_url, None, f"❌ Filing fetch failed: {resp.status_code}"
+            return filing_url, resp.text, "✅ Success (direct)"
+
+        # ------------------------------------------------------------
+        # CASE 2: Modern format where Filename includes accession folder
+        # Example: edgar/data/320193/000032019318000145/a10-k20189292018.htm
+        # We derive the index URL using the accession folder.
+        # ------------------------------------------------------------
+        parts = filename.split("/")
         if len(parts) < 4:
             return None, None, f"⚠️ Invalid path: {filename}"
 
         cik = parts[2]
-        accession_dashes = parts[3]
-        accession_nodash = accession_dashes.replace("-", "")
-        index_filename = accession_dashes + "-index.htm"
+        accession_nodash = parts[3]  # folder (typically no dashes)
+        accession_dashes = None
 
-        index_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_nodash}/{index_filename}"
-        headers = {"User-Agent": user_agent_email}
+        # Build index URL using the accession folder name
+        index_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_nodash}/index.html"
 
         resp = requests.get(index_url, headers=headers, timeout=15)
         if resp.status_code != 200:
@@ -84,25 +100,25 @@ def extract_filing_html_directly(row, user_agent_email):
         if not table:
             return index_url, None, "⚠️ No document table found"
 
-        link_tag = table.find("a", href=lambda h: h and h.endswith(".htm") and not h.endswith("-index.htm"))
+        # accept .htm and .html, ignore index files
+        link_tag = table.find(
+            "a",
+            href=lambda h: h and (h.endswith(".htm") or h.endswith(".html")) and "index" not in h.lower()
+        )
         if not link_tag:
-            return index_url, None, "⚠️ No primary .htm link found"
+            return index_url, None, "⚠️ No primary .htm/.html link found"
 
         filing_path = link_tag["href"].lstrip("/")
         filing_url = f"https://www.sec.gov/{filing_path}"
-
-        # ixviewer safety (does not change your normal paths)
-        filing_url = fix_ixviewer_url(filing_url)
 
         f_resp = requests.get(filing_url, headers=headers, timeout=25)
         if f_resp.status_code != 200:
             return filing_url, None, f"❌ Filing fetch failed: {f_resp.status_code}"
 
-        return filing_url, f_resp.text, "✅ Success"
+        return filing_url, f_resp.text, "✅ Success (index)"
 
     except Exception as e:
         return None, None, f"⚠️ Exception: {e}"
-
 
 # ============================================================
 # 2) YOUR CLEANING FUNCTION (core preserved)
