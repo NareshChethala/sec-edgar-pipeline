@@ -12,6 +12,8 @@
 ### Base
 - Python 3.9+
 - `requests`
+- `pandas`
+- `pyarrow`
 
 ### If using Google Cloud Storage
 - `google-cloud-storage`
@@ -102,5 +104,61 @@ Notes
 - The script assumes all input `.idx` files follow the standard SEC `company.idx` format.  
   Any non-standard rows are skipped safely.
 
+Here is a brief, minimal README for filter_10k_stream.py, written in the same style and level as the previous two scripts, and clearly positioned as the next step in the pipeline.
 
+⸻
+
+# filter_10k_stream.py
+
+## What this script does
+- Streams a large SEC filings dataset (CSV or Parquet) without loading it fully into memory.
+- Filters the data to keep only **10-K** and **10-K/A** filings.
+- Cleans and normalizes filing dates and adds a `Year` field.
+- Writes the filtered output in multiple Parquet part files, either locally or to Google Cloud Storage (GCS).
+
+This script is typically used **after parsing `company.idx` files** and before large-scale HTML fetching or modeling.
+
+---
+### Filter 10-K filings from a Parquet file and write locally
+```bash
+python code/filter_10k_stream.py \
+  --input /path/to/company_index.parquet \
+  --input-format parquet \
+  --storage local \
+  --out-base data/filtered_10k
+```
+Filter 10-K filings from Parquet in GCS and write back to GCS
+```bash
+python code/filter_10k_stream.py \
+  --input gs://your-bucket/idx_parsed/company_index.parquet \
+  --input-format parquet \
+  --storage gcs \
+  --out-base edgar_10k_filtered/parts \
+  --gcs-bucket your-bucket
+```
+Filter from CSV input (streamed in chunks)
+```bash
+python code/filter_10k_stream.py \
+  --input /path/to/company_index.csv \
+  --input-format csv \
+  --storage local \
+  --out-base data/filtered_10k
+```
+⸻
+
+Notes
+* The script processes data in batches (CSV chunks or Parquet row groups).
+* Output is always written as multiple Parquet part files.
+* Designed for large datasets and long-running jobs.
+* Supports a --max-batches option for testing on small samples.
+---
+
+## One thing to be aware of (not missing, just implicit)
+
+- The script assumes the input dataset already contains valid `Form Type` and `Date Filed` columns (as produced by the previous parsing step).
+
+If you want next, I can:
+- Write a **top-level pipeline README** tying all three scripts together
+- Add **very short inline comments** for maintainability
+- Help you create a **Makefile or runbook** for end-to-end execution
 
