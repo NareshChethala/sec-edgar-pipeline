@@ -33,5 +33,26 @@ python code/download_company_idx.py \
   --storage local \
   --start-year 2020 \
   --end-year 2021
-
+```
 ### Download to Google Cloud Storage
+```bash
+python code/download_company_idx.py \
+  --storage gcs \
+  --start-year 2020 \
+  --end-year 2021 \
+  --gcs-bucket your-bucket \
+  --gcs-prefix your-prefix
+```
+
+### Download to Amazon S3
+```bash
+python code/download_company_idx.py \
+  --storage s3 \
+  --start-year 2020 \
+  --end-year 2021 \
+  --s3-bucket your-bucket \
+  --s3-prefix your-prefix
+```
+You must provide either:
+* --years
+* OR both --start-year and --end-year
