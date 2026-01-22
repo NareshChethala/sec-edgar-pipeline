@@ -88,19 +88,17 @@ uv run python -m src.parse_company_idx \
   --format parquet
 ```
 Optional arguments
-	•	--format
+* --format
 Output format: csv or parquet (default: parquet)
-	•	--skip-if-exists
+* --skip-if-exists
 Skip processing if the output file already exists
 ⸻
 
 Notes
-	•	All .idx files are combined into a single dataset.
-	•	The script is tolerant to malformed rows and skips invalid lines.
-	•	Output is written locally or to GCS based on the output path.
+* All .idx files are combined into a single dataset.
+* The script is tolerant to malformed rows and skips invalid lines.
+* Output is written locally or to GCS based on the output path.
 ---
-
-## One thing to be aware of (not missing, just implicit)
-
 - The script assumes all input `.idx` files follow the standard SEC `company.idx` format.  
   Any non-standard rows are skipped safely.
+
