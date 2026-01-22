@@ -175,17 +175,17 @@ python code/fetch_10k_html_stream.py \
 ```
 ⸻
 Optional arguments
-* --delay
+  * --delay
 Seconds to wait between SEC requests (default: 1.5)
-* --retry-limit
+  * --retry-limit
 Retries per filing on failure (default: 2)
-* --checkpoint-every
+  * --checkpoint-every
 Number of successful filings per output part (default: 200)
-* --checkpoint-path
+  * --checkpoint-path
 Custom checkpoint JSON path (local or GCS)
-* --skip-if-exists
+  * --skip-if-exists
 Skip writing output parts that already exist
-* --max-rowgroups, --max-filings
+  * --max-rowgroups, --max-filings
 Limit processing for testing
 ⸻
 Notes
@@ -193,4 +193,5 @@ Notes
 * Checkpointing allows safe resume after interruption.
 * Output is written as partitioned Parquet files.
 * Uses SEC-compliant User-Agent for all requests.
+
 
