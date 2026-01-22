@@ -63,7 +63,7 @@ Here is a brief, clean README for this second script, written as a continuation 
 ⸻
 
 
-# parse_company_idx.py
+# parse_idx.py
 
 ## What this script does
 - Parses SEC EDGAR `company.idx` files into a structured dataset.
@@ -101,4 +101,5 @@ Notes
 ---
 - The script assumes all input `.idx` files follow the standard SEC `company.idx` format.  
   Any non-standard rows are skipped safely.
+
 
