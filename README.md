@@ -14,6 +14,8 @@
 - `requests`
 - `pandas`
 - `pyarrow`
+- `requests`
+- `beautifulsoup4`
 
 ### If using Google Cloud Storage
 - `google-cloud-storage`
@@ -59,11 +61,7 @@ You must provide either:
 * --years
 * OR both --start-year and --end-year
 
-
-Here is a brief, clean README for this second script, written as a continuation in style from the first one. It only covers what it does → requirements → how to use, with no deep internals.
-
-⸻
-
+---
 
 # parse_idx.py
 
@@ -100,12 +98,6 @@ Notes
 * All .idx files are combined into a single dataset.
 * The script is tolerant to malformed rows and skips invalid lines.
 * Output is written locally or to GCS based on the output path.
----
-- The script assumes all input `.idx` files follow the standard SEC `company.idx` format.  
-  Any non-standard rows are skipped safely.
-
-Here is a brief, minimal README for filter_10k_stream.py, written in the same style and level as the previous two scripts, and clearly positioned as the next step in the pipeline.
-
 ⸻
 
 # filter_10k_stream.py
@@ -151,14 +143,53 @@ Notes
 * Output is always written as multiple Parquet part files.
 * Designed for large datasets and long-running jobs.
 * Supports a --max-batches option for testing on small samples.
+⸻
+
+
+# fetch_10k_html_stream.py
+
+## What this script does
+- Streams a large 10-K metadata Parquet file (local or GCS) without loading it fully into memory.
+- Downloads full SEC 10-K / 10-K/A filing HTML using SEC-compliant requests.
+- Cleans the HTML into readable plain text.
+- Writes results into multiple Parquet part files (local or GCS).
+- Supports checkpointing and safe resume for long-running jobs.
+
+This script is typically used **after filtering filings to 10-K / 10-K/A**, and before NLP, RAG, or modeling stages.
+
 ---
 
-## One thing to be aware of (not missing, just implicit)
-
-- The script assumes the input dataset already contains valid `Form Type` and `Date Filed` columns (as produced by the previous parsing step).
-
-If you want next, I can:
-- Write a **top-level pipeline README** tying all three scripts together
-- Add **very short inline comments** for maintainability
-- Help you create a **Makefile or runbook** for end-to-end execution
-
+### Fetch and clean 10-K filings (GCS → GCS)
+```bash
+python code/fetch_10k_html_stream.py \
+  --input gs://your-bucket/filtered_10k/company_index_10k.parquet \
+  --output-prefix gs://your-bucket/edgar_10k_html/parts \
+  --user-agent "Your Name email@domain.com"
+```
+Fetch and clean 10-K filings (local → local)
+```bash
+python code/fetch_10k_html_stream.py \
+  --input /path/to/company_index_10k.parquet \
+  --output-prefix data/edgar_10k_html/parts \
+  --user-agent "Your Name email@domain.com"
+```
+⸻
+Optional arguments
+	*	--delay
+Seconds to wait between SEC requests (default: 1.5)
+	*	--retry-limit
+Retries per filing on failure (default: 2)
+	*	--checkpoint-every
+Number of successful filings per output part (default: 200)
+	*	--checkpoint-path
+Custom checkpoint JSON path (local or GCS)
+	*	--skip-if-exists
+Skip writing output parts that already exist
+	*	--max-rowgroups, --max-filings
+Limit processing for testing
+⸻
+Notes
+* Designed for multi-hour or multi-day runs.
+* Checkpointing allows safe resume after interruption.
+* Output is written as partitioned Parquet files.
+* Uses SEC-compliant User-Agent for all requests.
