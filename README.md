@@ -74,7 +74,7 @@ Here is a brief, clean README for this second script, written as a continuation 
 ---
 ### Parse IDX files from local directory
 ```bash
-uv run python -m src.parse_company_idx \
+uv run python -m src.parse_idx \
   --input /path/to/local/idx_files \
   --output /path/to/output/company_index.parquet \
   --format parquet
@@ -82,7 +82,7 @@ uv run python -m src.parse_company_idx \
 
 Parse IDX files from GCS
 ```bash
-uv run python -m src.parse_company_idx \
+uv run python -m src.parse_idx \
   --input gs://your-bucket/idx_files \
   --output gs://your-bucket/idx_parsed/company_index.parquet \
   --format parquet
@@ -101,5 +101,6 @@ Notes
 ---
 - The script assumes all input `.idx` files follow the standard SEC `company.idx` format.  
   Any non-standard rows are skipped safely.
+
 
 
