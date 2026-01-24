@@ -1,0 +1,564 @@
+==================================================
+[START] Wed Jan 21 16:06:44 UTC 2026 | Host=sec-pipeline-mac4 | PWD=/home/nareshchandra_chethala/sec-pipeline
+[LOG]   logs/tenk_scrape_20260121.log
+==================================================
+--------------------------------------------------
+[RUN ] Wed Jan 21 16:06:44 UTC 2026 Starting scraper...
+------------------------------------------------------------
+[INFO] input=gs://sec-financials-edgar/edgar_idx_files/filtered/company_index_10k.parquet (gcs)
+[INFO] output-prefix=gs://sec-financials-edgar/edgar_10k_html/parts
+[INFO] delay=2.0s retry_limit=2 checkpoint_every=25
+[INFO] checkpoint=gs://sec-financials-edgar/edgar_10k_html/parts/_checkpoint.json
+[RESUME] rowgroup=0 row_in_rowgroup=200 out_part=8 total_seen=200 total_ok=200
+------------------------------------------------------------
+[ROWGROUP 001/23] candidates=43,293
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000008.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000009.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000010.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000011.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000012.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000013.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000014.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000015.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000016.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000017.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000018.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000019.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000020.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000021.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000022.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000023.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000024.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000025.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000026.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000027.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000028.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000029.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000030.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000031.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000032.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000033.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000034.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000035.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000036.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000037.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000038.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000039.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000040.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000041.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000042.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000043.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000044.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000045.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000046.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000047.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000048.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000049.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000050.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000051.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000052.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000053.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000054.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000055.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000056.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000057.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000058.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000059.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000060.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000061.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000062.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000063.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000064.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000065.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000066.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000067.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000068.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000069.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000070.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000071.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000072.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000073.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000074.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000075.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000076.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000077.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000078.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000079.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000080.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000081.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000082.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000083.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000084.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000085.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000086.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000087.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000088.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000089.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000090.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000091.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000092.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000093.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000094.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000095.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000096.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000097.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000098.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000099.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000100.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000101.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000102.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000103.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000104.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000105.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000106.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000107.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000108.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000109.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000110.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000111.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000112.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000113.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000114.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000115.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000116.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000117.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000118.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000119.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000120.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000121.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000122.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000123.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000124.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000125.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000126.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000127.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000128.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000129.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000130.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000131.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000132.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000133.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000134.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000135.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000136.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000137.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000138.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000139.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000140.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000141.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000142.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000143.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000144.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000145.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000146.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000147.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000148.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000149.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000150.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000151.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000152.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000153.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000154.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000155.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000156.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000157.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000158.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000159.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000160.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000161.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000162.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000163.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000164.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000165.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000166.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000167.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000168.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000169.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000170.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000171.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000172.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000173.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000174.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000175.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000176.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000177.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000178.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000179.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000180.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000181.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000182.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000183.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000184.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000185.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000186.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000187.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000188.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000189.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000190.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000191.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000192.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000193.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000194.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000195.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000196.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000197.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000198.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000199.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000200.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000201.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000202.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000203.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000204.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000205.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000206.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000207.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000208.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000209.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000210.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000211.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000212.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000213.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000214.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000215.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000216.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000217.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000218.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000219.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000220.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000221.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000222.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000223.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000224.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000225.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000226.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000227.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000228.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000229.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000230.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000231.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000232.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000233.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000234.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000235.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000236.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000237.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000238.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000239.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000240.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000241.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000242.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000243.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000244.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000245.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000246.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000247.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000248.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000249.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000250.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000251.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000252.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000253.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000254.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000255.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000256.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000257.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000258.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000259.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000260.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000261.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000262.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000263.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000264.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000265.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000266.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000267.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000268.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000269.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000270.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000271.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000272.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000273.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000274.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000275.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000276.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000277.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000278.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000279.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000280.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000281.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000282.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000283.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000284.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000285.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000286.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000287.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000288.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000289.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000290.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000291.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000292.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000293.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000294.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000295.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000296.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000297.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000298.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000299.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000300.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000301.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000302.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000303.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000304.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000305.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000306.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000307.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000308.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000309.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000310.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000311.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000312.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000313.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000314.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000315.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000316.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000317.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000318.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000319.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000320.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000321.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000322.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000323.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000324.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000325.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000326.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000327.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000328.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000329.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000330.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000331.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000332.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000333.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000334.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000335.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000336.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000337.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000338.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000339.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000340.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000341.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000342.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000343.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000344.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000345.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000346.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000347.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000348.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000349.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000350.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000351.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000352.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000353.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000354.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000355.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000356.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000357.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000358.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000359.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000360.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000361.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000362.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000363.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000364.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000365.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000366.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000367.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000368.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000369.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000370.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000371.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000372.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000373.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000374.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000375.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000376.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000377.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000378.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000379.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000380.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000381.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000382.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000383.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000384.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000385.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000386.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000387.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000388.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000389.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000390.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000391.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000392.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000393.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000394.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000395.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000396.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000397.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000398.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000399.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000400.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000401.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000402.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000403.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000404.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000405.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000406.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000407.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000408.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000409.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000410.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000411.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000412.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000413.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000414.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000415.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000416.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000417.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000418.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000419.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000420.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000421.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000422.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000423.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000424.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000425.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000426.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000427.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000428.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000429.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000430.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000431.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000432.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000433.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000434.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000435.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000436.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000437.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000438.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000439.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000440.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000441.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000442.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000443.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000444.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000445.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000446.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000447.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000448.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000449.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000450.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000451.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000452.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000453.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000454.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000455.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000456.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000457.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000458.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000459.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000460.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000461.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000462.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000463.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000464.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000465.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000466.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000467.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000468.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000469.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000470.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000471.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000472.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000473.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000474.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000475.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000476.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000477.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000478.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000479.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000480.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000481.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000482.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000483.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000484.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000485.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000486.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000487.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000488.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000489.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000490.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000491.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000492.parquet
+[SKIP] exists: gs://sec-financials-edgar/edgar_10k_html/parts/part-000493.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000494.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000495.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000496.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000497.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000498.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000499.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000500.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000501.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000502.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000503.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000504.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000505.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000506.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000507.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000508.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000509.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000510.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000511.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000512.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000513.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000514.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000515.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000516.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000517.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000518.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000519.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000520.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000521.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000522.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000523.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000524.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000525.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000526.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000527.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000528.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000529.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000530.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000531.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000532.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000533.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000534.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000535.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000536.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000537.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000538.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000539.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000540.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000541.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000542.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000543.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000544.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000545.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000546.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000547.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000548.parquet
+[OK] wrote 25 rows -> gs://sec-financials-edgar/edgar_10k_html/parts/part-000549.parquet
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/nareshchandra_chethala/sec-pipeline/src/fetch_10k_html_batch.py", line 459, in <module>
+    main()
+  File "/home/nareshchandra_chethala/sec-pipeline/src/fetch_10k_html_batch.py", line 442, in main
+    time.sleep(args.delay)
+KeyboardInterrupt
