@@ -16,3 +16,12 @@ _tmp_idx_downloads/
 *.json
 .env
 EOF
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+
