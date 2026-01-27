@@ -10,7 +10,7 @@
 ## Requirements
 
 ### Base
-- Python 3.9+
+- Python 3.11+
 - `requests`
 - `pandas`
 - `pyarrow`

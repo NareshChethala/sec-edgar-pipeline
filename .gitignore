@@ -25,3 +25,5 @@ __pycache__/
 logs/
 *.log
 
+*.parquet
+*.csv
