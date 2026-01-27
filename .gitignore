@@ -25,3 +25,5 @@ __pycache__/
 logs/
 *.log
 
+run_10k_forever.sh
+run_10k_forever.sh
