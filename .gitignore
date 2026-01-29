@@ -26,4 +26,5 @@ logs/
 *.log
 
 *.parquet
-*.csvsrc/01_idx_eda.ipynb
+*.csv
+src/01_idx_eda.ipynb
