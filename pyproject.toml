@@ -10,16 +10,11 @@ dependencies = [
     "gcsfs>=2026.1.0",
     "ipykernel>=7.1.0",
     "jupyter>=1.1.1",
+    "lab>=8.8",
     "matplotlib>=3.10.8",
-    "pandas>=2.3.3",
+    "numpy>=2.4.1",
+    "pandas>=3.0.0",
     "pyarrow>=23.0.0",
     "requests>=2.32.5",
-    "seaborn>=0.13.2",
     "tqdm>=4.67.1",
-]
-
-[dependency-groups]
-dev = [
-    "ipykernel>=7.1.0",
-    "jupyter>=1.1.1",
 ]
