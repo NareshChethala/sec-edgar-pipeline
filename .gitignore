@@ -27,4 +27,3 @@ logs/
 
 *.parquet
 *.csv
-src/01_idx_eda.ipynb
