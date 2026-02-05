@@ -11,6 +11,7 @@ _tmp_idx_downloads/
 
 # OS
 .DS_Store
+.pdf
 
 # Credentials
 *.json
